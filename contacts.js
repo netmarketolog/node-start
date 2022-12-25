@@ -46,7 +46,7 @@ async function listContacts() {
 
 async function getContactById(id) {
   const db = await readDb();
-  const updateDb = db.filter((contact) => contact.id === String(id));
+  const updateDb = db.find((contact) => contact.id === String(id));
   return updateDb;
 }
 
